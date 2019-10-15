@@ -62,3 +62,6 @@ delete all images with docker rmi $(docker images -q)
 36-docker image inspect [imageName]  — print all detail about that image
 37-docker image ls — this will shows all images that we have
 38-docker image tag <SOURCE_IMAGE[:TAG]> <TARGET_IMAGE[:TAG]> — This command just creates an alias (a reference) by the name of the TARGET_IMAGE that refers to the SOURCE_IMAGE. That’s all it does. It’s like assigning an existing image another name to refer to it. Notice how the tag is specified as optional here as well, by the [:TAG] .
+39-docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql // this will gave a name to volume as mysql-db
+40-docker volume create [OPTIONS] [VOLUME] // we can create docker volume without docker run command
+41-39-docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v /var/lib/mysql:/var/lib/mysql mysql // you can use this for binding mount

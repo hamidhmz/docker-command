@@ -65,7 +65,9 @@ delete all images with docker rmi $(docker images -q)
 39-docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v mysql-db:/var/lib/mysql mysql // this will gave a name to volume as mysql-db
 40-docker volume create [OPTIONS] [VOLUME] // we can create docker volume without docker run command
 41-docker container run -d --name mysql -e MYSQL_ALLOW_EMPTY_PASSWORD=True -v /var/lib/mysql:/var/lib/mysql mysql // you can use this for binding mount
-42-docker-compose up // when you have docker-compose file
+42-docker-compose up // when you have docker-compose file build when couldn't find image 
 43-docker-compose down //stop all containers and remove cont/vol/vol/net
 44-docker-compose --help // show all command 
 45-docker-compose ps // show all containers running from docker-compose path
+46-docker-compose down -v // this also remove all volumes 
+47-docker-compose up --build or docker-compose build // this will rebuild your image when you change your image you must use this

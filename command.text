@@ -73,5 +73,5 @@ delete all images with docker rmi $(docker images -q)
 47-docker-compose up --build or docker-compose build // this will rebuild your image when you change your image you must use this
 48-docker export [OPTIONS] CONTAINER // export or backup from container e.g:docker export --output="latest.tar" red_panda          or                  docker export red_panda > latest.tar
 49-docker import [OPTIONS] file|URL|- [REPOSITORY[:TAG]] e.g: docker import http://example.com/exampleimage.tgz //This will create a new untagged image.
-50-docker save [OPTIONS] IMAGE [IMAGE...] e.g: docker save -o fedora-all.tar fedora //Save one or more images to a tar archive
-51-docker load [OPTIONS] e.g:docker load < busybox.tar.gz //Load an image from a tar archive or STDIN
+50-docker save [OPTIONS] IMAGE [IMAGE...] e.g: docker save -o fedora-all.tar fedora //Save one or more images to a tar archive e.g: docker save myimage:latest | gzip > myimage_latest.tar.gz
+51-docker load [OPTIONS] e.g:docker load < busybox.tar.gz //Load an image from a tar archive or STDIN 

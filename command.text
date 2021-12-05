@@ -77,3 +77,5 @@ delete all images with docker rmi $(docker images -q)
 51-docker load [OPTIONS] e.g:docker load < busybox.tar.gz //Load an image from a tar archive or STDIN 
 52-docker cp foo.txt mycontainer:/foo.txt // One specific file can be copied TO the container like that 
 53-docker cp mycontainer:/foo.txt foo.txt // One specific file can be copied FROM the container like that
+54-the easiest way to remove dangling images is  bash``` docker rmi $(docker images -qa -f 'dangling=true') ```
+
